@@ -27,20 +27,20 @@ spec:
             - name: discovery.type
               value: single-node
           image: docker.elastic.co/elasticsearch/elasticsearch:8.16.2
-          readinessProbe:
-            exec:
-              command:
-              - curl
-              - localhost:9200/_cluster/health
-            initialDelaySeconds: 300
-            periodSeconds: 10
-          livenessProbe:
-            exec:
-              command:
-              - curl
-              - localhost:9200/_cluster/health
-            initialDelaySeconds: 300
-            periodSeconds: 10
+          # readinessProbe:
+          #   exec:
+          #     command:
+          #     - curl
+          #     - localhost:9200/_cluster/health
+          #   initialDelaySeconds: 300
+          #   periodSeconds: 10
+          # livenessProbe:
+          #   exec:
+          #     command:
+          #     - curl
+          #     - localhost:9200/_cluster/health
+          #   initialDelaySeconds: 300
+          #   periodSeconds: 10
           ports:
             - containerPort: 9200
             - containerPort: 9300

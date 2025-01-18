@@ -21,20 +21,20 @@ spec:
             - name: ELASTICSEARCH_HOSTS
               value: http://es-master-service:9200
           image: docker.elastic.co/kibana/kibana:8.16.2
-          readinessProbe:
-            exec:
-              command:
-              - curl
-              - localhost:5601/api/status
-            initialDelaySeconds: 30
-            periodSeconds: 10
-          livenessProbe:
-            exec:
-              command:
-              - curl
-              - localhost:5601/api/status
-            initialDelaySeconds: 30
-            periodSeconds: 10
+          # readinessProbe:
+          #   exec:
+          #     command:
+          #     - curl
+          #     - localhost:5601/api/status
+          #   initialDelaySeconds: 30
+          #   periodSeconds: 10
+          # livenessProbe:
+          #   exec:
+          #     command:
+          #     - curl
+          #     - localhost:5601/api/status
+          #   initialDelaySeconds: 30
+          #   periodSeconds: 10
           name: kibana
           ports:
             - containerPort: 5601
