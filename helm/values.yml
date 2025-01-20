@@ -1198,6 +1198,8 @@ grafana:
     portName: http-web
     ipFamilies: []
     ipFamilyPolicy: ""
+    type: NodePort
+    nodePort: 30008
 
   serviceMonitor:
     # If true, a ServiceMonitor CRD is created for a prometheus operator

@@ -21,8 +21,8 @@
 --- `helm repo list` <br>
 --- `helm list`:  lists all charts <br>
 --- `helm uninstall <CHART NAME>` <br>
---- `` <br>
---- `` <br>
+--- `helm -n NAMESPACE show values  prometheus-community/kube-prometheus-stack > values.ym `:  extract values.yml file <br>
+--- `helm -n NAMESPACE upgrade prometheus-community/kube-prometheus-stack --set grafana.adminPassword=<NEW-PASSWORD>` : update "values.yml" file<br>
 
 - Chart Values
 
