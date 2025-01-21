@@ -23,9 +23,25 @@
 --- `helm uninstall <CHART NAME>` <br>
 --- `helm -n NAMESPACE show values  prometheus-community/kube-prometheus-stack > values.ym `:  extract values.yml file <br>
 --- `helm -n NAMESPACE upgrade prometheus-community/kube-prometheus-stack --set grafana.adminPassword=<NEW-PASSWORD>` : update "values.yml" file<br>
+--- `helm pull prometheus-community/kube-prometheus-stack --untar=true` <br>
 
+--- In order to rebuild custom helm chart
+--- To get full source code of a chart: `helm pull prometheus-community/kube-prometheus-stack --untar=true`
+--- `helm install GIVE-IT-NAME ./kube-prometheus-stack`
 - Chart Values
 
+##### To create custom helm chart 
+  1) Download (pull) : the necessary helm chart files to local repository <br>
+    ○ Example: pull prometheus stack <br>
+      § "helm pull prometheus-community/kube-prometheus-stack --untar=true" <br>
+      § This will download default files to build form prometheus helm <br>
+    ○ We can install from the downloaded default files <br>
+      § helm install GIVE-IT-NAME ./kube-prometheus-stack <br>
+  2) Customize the downloaded default files <br>
+    a. Makes necessary changes to "values.yaml" file <br>
+Run "helm  upgrade prometheus-community/kube-prometheus-stack --values=values.yaml" <br>
+
+---
 
 <summary>What is Helm?</summary><br><b>
 

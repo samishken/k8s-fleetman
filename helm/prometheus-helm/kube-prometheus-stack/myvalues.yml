@@ -1,0 +1,8 @@
+grafana:
+  adminPassword: prom-operator  #default password
+  ## adminPassword: ADD-CUSTOM-PASSWORD
+
+  service:
+    portName: service
+    type: NodePort
+    nodePort: 30008
